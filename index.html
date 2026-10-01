@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>間違い探しゲーム</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Find the difference</p>
+          <h1>間違い探し</h1>
+        </div>
+
+        <div class="status-area">
+          <div class="stat-box">
+            <span class="label">見つけた</span>
+            <strong id="score">0 / 7</strong>
+          </div>
+          <div class="stat-box">
+            <span class="label">時間</span>
+            <strong id="timer">60</strong>s
+          </div>
+          <button id="restartBtn" class="primary-btn">やり直す</button>
+        </div>
+      </header>
+
+      <main class="board" aria-label="間違い探しゲームのボード">
+        <section class="panel" aria-label="比較画像A">
+          <div class="panel-tag">A</div>
+          <div class="scene scene-left" data-scene="left">
+            <div class="sky"></div>
+            <div class="sun"></div>
+            <div class="cloud cloud-a"></div>
+            <div class="cloud cloud-b"></div>
+
+            <div class="hill hill-back"></div>
+            <div class="hill hill-front"></div>
+
+            <div class="house">
+              <div class="roof"></div>
+              <div class="chimney"></div>
+              <div class="window left-window"></div>
+              <div class="window right-window"></div>
+              <div class="door"></div>
+            </div>
+
+            <div class="tree">
+              <div class="trunk"></div>
+              <div class="crown c1"></div>
+              <div class="crown c2"></div>
+              <div class="crown c3"></div>
+            </div>
+
+            <div class="flower flower-a"></div>
+            <div class="flower flower-b"></div>
+            <div class="flower flower-c"></div>
+
+            <div class="bird bird-a"></div>
+            <div class="bird bird-b"></div>
+
+            <div class="ground"></div>
+
+            <button class="hotspot" data-id="sun" aria-label="太陽"></button>
+            <button class="hotspot" data-id="cloud1" aria-label="雲1"></button>
+            <button class="hotspot" data-id="cloud2" aria-label="雲2"></button>
+            <button class="hotspot" data-id="tree" aria-label="木"></button>
+            <button class="hotspot" data-id="flower" aria-label="花"></button>
+            <button class="hotspot" data-id="window" aria-label="窓"></button>
+            <button class="hotspot" data-id="bird" aria-label="鳥"></button>
+          </div>
+        </section>
+
+        <section class="panel" aria-label="比較画像B">
+          <div class="panel-tag">B</div>
+          <div class="scene scene-right" data-scene="right">
+            <div class="sky"></div>
+            <div class="sun"></div>
+            <div class="cloud cloud-a"></div>
+            <div class="cloud cloud-b"></div>
+
+            <div class="hill hill-back"></div>
+            <div class="hill hill-front"></div>
+
+            <div class="house">
+              <div class="roof"></div>
+              <div class="chimney"></div>
+              <div class="window left-window"></div>
+              <div class="window right-window"></div>
+              <div class="door"></div>
+            </div>
+
+            <div class="tree">
+              <div class="trunk"></div>
+              <div class="crown c1"></div>
+              <div class="crown c2"></div>
+              <div class="crown c3"></div>
+            </div>
+
+            <div class="flower flower-a"></div>
+            <div class="flower flower-b"></div>
+            <div class="flower flower-c"></div>
+
+            <div class="bird bird-a"></div>
+            <div class="bird bird-b"></div>
+
+            <div class="ground"></div>
+
+            <button class="hotspot" data-id="sun" aria-label="太陽"></button>
+            <button class="hotspot" data-id="cloud1" aria-label="雲1"></button>
+            <button class="hotspot" data-id="cloud2" aria-label="雲2"></button>
+            <button class="hotspot" data-id="tree" aria-label="木"></button>
+            <button class="hotspot" data-id="flower" aria-label="花"></button>
+            <button class="hotspot" data-id="window" aria-label="窓"></button>
+            <button class="hotspot" data-id="bird" aria-label="鳥"></button>
+          </div>
+        </section>
+      </main>
+
+      <div id="message" class="message" aria-live="polite">
+        2つの絵の違いを見つけて、丸い場所をクリックしてね！
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
